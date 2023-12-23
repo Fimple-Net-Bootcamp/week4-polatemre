@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 using VirtualPetCareApi.Application.Features.Commands.Activities;
+using VirtualPetCareApi.Application.Features.Queries.SocialInteractions;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -28,9 +29,9 @@ namespace VirtualPetCareApi.WebAPI.Controllers
         //}
 
         [HttpGet("{PetId}")]
-        public async Task<IActionResult> Get([FromRoute] GetByPetIdAcitivityQuery getByIdAcitivityQuery)
+        public async Task<IActionResult> Get([FromRoute] GetByPetIdSocialInetaractionQuery getByIdAcitivityQuery)
         {
-            GetByPetIdSocialInteractionQueryResponse response = await _mediator.Send(getByIdAcitivityQuery);
+            GetByPetIdSocialInetaractionQueryResponse response = await _mediator.Send(getByIdAcitivityQuery);
             return Ok(response);
         }
 
