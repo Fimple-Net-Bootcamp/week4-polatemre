@@ -25,6 +25,8 @@ namespace VirtualPetCareApi.Persistence.Contexts
         public DbSet<Pet> Pets { get; set; }
         public DbSet<Health> Healths { get; set; }
         public DbSet<Food> Foods { get; set; }
+        public DbSet<Education> Educations { get; set; }
+        public DbSet<SocialInteraction> SocialInteractions { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

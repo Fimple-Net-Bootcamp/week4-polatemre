@@ -36,6 +36,12 @@ namespace VirtualPetCareApi.Persistence
             services.AddScoped<IFoodReadRepository, FoodReadRepository>();
             services.AddScoped<IFoodWriteRepository, FoodWriteRepository>();
 
+            services.AddScoped<IEducationReadRepository, EducationReadRepository>();
+            services.AddScoped<IEducationWriteRepository, EducationWriteRepository>();
+
+            services.AddScoped<ISocialInteractionReadRepository, SocialInteractionReadRepository>();
+            services.AddScoped<ISocialInteractionWriteRepository, SocialInteractionWriteRepository>();
+
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<IExternalAuthentication, AuthService>();
