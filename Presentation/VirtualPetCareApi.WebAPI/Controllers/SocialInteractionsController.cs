@@ -29,9 +29,9 @@ namespace VirtualPetCareApi.WebAPI.Controllers
         //}
 
         [HttpGet("{PetId}")]
-        public async Task<IActionResult> Get([FromRoute] GetByPetIdSocialInetaractionQuery getByIdAcitivityQuery)
+        public async Task<IActionResult> Get([FromRoute] GetByPetIdSocialInteractionQuery getByIdAcitivityQuery)
         {
-            GetByPetIdSocialInetaractionQueryResponse response = await _mediator.Send(getByIdAcitivityQuery);
+            GetByPetIdSocialInteractionQueryResponse response = await _mediator.Send(getByIdAcitivityQuery);
             return Ok(response);
         }
 
