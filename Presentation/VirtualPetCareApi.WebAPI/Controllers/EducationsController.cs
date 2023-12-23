@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using VirtualPetCareApi.Application.Features.Commands.Activities;
+using VirtualPetCareApi.Application.Features.Queries.Educations;
 
 namespace VirtualPetCareApi.WebAPI.Controllers
 {
@@ -14,6 +15,13 @@ namespace VirtualPetCareApi.WebAPI.Controllers
         public EducationsController(IMediator mediator)
         {
             _mediator = mediator;
+        }
+
+        [HttpGet("{PetId}")]
+        public async Task<IActionResult> Get([FromRoute] GetByPetIdEducationQuery getByIdAcitivityQuery)
+        {
+            GetByPetIdEducationQueryResponse response = await _mediator.Send(getByIdAcitivityQuery);
+            return Ok(response);
         }
 
         [HttpPost]
