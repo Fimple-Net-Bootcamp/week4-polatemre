@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using VirtualPetCareApi.Persistence.Contexts;
@@ -11,9 +12,11 @@ using VirtualPetCareApi.Persistence.Contexts;
 namespace VirtualPetCareApi.Persistence.Migrations
 {
     [DbContext(typeof(VirtualPetCareApiDbContext))]
-    partial class VirtualPetCareApiDbContextModelSnapshot : ModelSnapshot
+    [Migration("20231223042957_mig_6")]
+    partial class mig_6
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

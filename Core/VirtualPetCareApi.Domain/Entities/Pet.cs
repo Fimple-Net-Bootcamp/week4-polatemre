@@ -21,5 +21,7 @@ namespace VirtualPetCareApi.Domain.Entities
         public AppUser User { get; set; }
 
         public ICollection<Activity> Activities { get; set; }
+        public ICollection<Pet> Pets { get; set; }
+        public ICollection<SocialInteraction> SocialInteractions { get; set; }
     }
 }

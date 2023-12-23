@@ -29,5 +29,12 @@ namespace VirtualPetCareApi.WebAPI.Controllers
             GetByIdUserQueryResponse response = await _mediator.Send(getByIdUserQuery);
             return Ok(response);
         }
+
+        [HttpGet("statistics/{Id}")]
+        public async Task<IActionResult> GetStatisticsById([FromRoute] GetByIdUserQuery getByIdUserQuery)
+        {
+            GetByIdUserQueryResponse response = await _mediator.Send(getByIdUserQuery);
+            return Ok(response);
+        }
     }
 }
